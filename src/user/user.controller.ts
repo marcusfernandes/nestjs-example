@@ -16,10 +16,6 @@ export class UserController {
     return this.userService.find();
   }
 
-  @Post('/loggin')
-  findOne(@Body() username:string): Promise<User>{
-    return this.userService.findOne(username) 
-  }
 
   @Post()
   async store(@Body() body: User): Promise<User>{
